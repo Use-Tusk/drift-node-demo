@@ -277,6 +277,10 @@ Tusk Drift:
 - [Node SDK Repository](https://github.com/Use-Tusk/drift-node-sdk)
 - [Documentation](https://docs.usetusk.ai)
 
+## Community
+
+Join our open source community on [Slack](https://join.slack.com/t/tusk-community/shared_invite/zt-3fve1s7ie-NAAUn~UpHsf1m_2tdoGjsQ).
+
 ## Support
 
 Questions? Reach out:
