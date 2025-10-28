@@ -1,6 +1,6 @@
 {
   "name": "Tusk Drift Node Demo",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
   "postCreateCommand": "bash .devcontainer/setup.sh"
 }
 
