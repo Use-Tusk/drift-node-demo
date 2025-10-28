@@ -3,7 +3,16 @@ set -e
 
 echo "🚀 Setting up Tusk Drift Node Demo environment..."
 
-# Verify Node.js version
+# Load nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Install Node.js version from .nvmrc
+echo "📦 Installing Node.js version..."
+nvm install
+nvm use
+
+# Verify versions
 echo "📦 Node.js version: $(node --version)"
 echo "📦 npm version: $(npm --version)"
 
@@ -15,9 +24,9 @@ npm install
 echo "🔧 Installing Tusk CLI..."
 curl -fsSL https://raw.githubusercontent.com/Use-Tusk/tusk-drift-cli/main/install.sh | sh
 
-# Fetch the buggy-branch
-echo "🌿 Fetching buggy-branch..."
-git fetch origin buggy-branch:buggy-branch || echo "Note: buggy-branch may already exist or couldn't be fetched"
+# Fetch branches from origin
+echo "🌿 Fetching branches from origin..."
+git fetch origin || echo "Note: Could not fetch from origin"
 
 # Display helpful information
 echo ""
