@@ -15,10 +15,6 @@ npm install
 echo "🔧 Installing Tusk CLI..."
 curl -fsSL https://raw.githubusercontent.com/Use-Tusk/tusk-drift-cli/main/install.sh | sh
 
-# Fetch branches from origin
-echo "🌿 Fetching branches from origin..."
-git fetch origin || echo "⚠️  Note: Could not fetch from origin"
-
 # Display helpful information
 echo ""
 echo "✅ Setup complete!"
