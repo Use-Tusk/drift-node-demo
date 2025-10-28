@@ -49,6 +49,8 @@ Record from dev/production (at low sampling rates), and Cloud handles trace cura
 
 ### 1. Clone and Install
 
+Open this demo repo in a [new codespace](https://codespaces.new/Use-Tusk/drift-node-demo) or clone it and install dependencies:
+
 ```bash
 # Clone the repository
 git clone https://github.com/Use-Tusk/drift-node-demo.git
@@ -108,7 +110,7 @@ When you run `tusk run`, the CLI:
 
 ## Detecting Bugs with Tusk
 
-Want to see Tusk catch a bug? Switch to the `buggy-branch` branch:
+Want to see Tusk catch a bug? Open `buggy-branch` in a [new codespace](https://codespaces.new/Use-Tusk/drift-node-demo/tree/buggy-branch) or switch to the branch in your cloned repo:
 
 ```bash
 git checkout buggy-branch
@@ -119,7 +121,7 @@ This branch introduces a subtle bug by converting the temperature from Celsius t
 
 Tusk Drift will detect the deviation in the `/api/weather-activity` endpoint and mark the test as failed.
 
-Changes in `buggy-branch`:
+Changes to `server.ts` in `buggy-branch`:
 
 ```diff
 @@ -8,6 +8,10 @@ const PORT = 3000;
