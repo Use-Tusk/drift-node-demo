@@ -1,6 +1,9 @@
 {
   "name": "Tusk Drift Node Demo",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
-  "postCreateCommand": "bash .devcontainer/setup.sh"
+  "image": "node:22-bookworm-slim",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "remoteUser": "node"
 }
-

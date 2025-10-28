@@ -3,11 +3,9 @@ set -e
 
 echo "🚀 Setting up Tusk Drift Node Demo environment..."
 
-# Install Node.js version using nvm
-echo "📦 Installing Node.js version..."
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-nvm use
+# Verify Node.js version
+echo "📦 Node.js version: $(node --version)"
+echo "📦 npm version: $(npm --version)"
 
 # Install npm dependencies
 echo "📦 Installing npm dependencies..."
@@ -35,4 +33,3 @@ echo "🔍 Available branches:"
 git branch -a | grep -E "(main|buggy-branch)" || echo "  - main (current)"
 echo ""
 echo "🎉 Ready to explore Tusk Drift!"
-
