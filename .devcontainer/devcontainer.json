@@ -1,0 +1,6 @@
+{
+  "name": "Tusk Drift Node Demo",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "remoteUser": "node"
+}
