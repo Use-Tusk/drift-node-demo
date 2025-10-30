@@ -47,9 +47,13 @@ Record from dev/production (at low sampling rates), and Cloud handles trace cura
 - Node.js v22.18.0+ (we recommend using [nvm](https://github.com/nvm-sh/nvm))
 - npm
 
-### 1. Clone and Install
+### 1. Create New Codespace
 
-Open this demo repo in a [new codespace](https://codespaces.new/Use-Tusk/drift-node-demo) or clone it and install dependencies:
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Use-Tusk/drift-node-demo)
+
+Open this demo repo in a [new GitHub Codespace](https://codespaces.new/Use-Tusk/drift-node-demo). Wait 2 minutes for the setup script to automatically install the Tusk CLI and all dependencies.
+
+Alternatively, you can clone the repo and install dependencies manually:
 
 ```bash
 # Clone the repository
@@ -64,6 +68,9 @@ npm install
 ```
 
 ### 2. Install Tusk CLI
+
+> [!NOTE]
+> Skip this step if you created a GitHub Codespace for this demo repo.
 
 **macOS/Linux:**
 
@@ -110,7 +117,7 @@ When you run `tusk run`, the CLI:
 
 ## Detecting Bugs with Tusk
 
-Want to see Tusk catch a bug? Open `buggy-branch` in a [new codespace](https://codespaces.new/Use-Tusk/drift-node-demo/tree/buggy-branch) or switch to the branch in your cloned repo:
+Want to see Tusk catch a bug? Open this [new codespace](https://codespaces.new/Use-Tusk/drift-node-demo/tree/buggy-branch) or switch to `buggy-branch` in the repo:
 
 ```bash
 git checkout buggy-branch
