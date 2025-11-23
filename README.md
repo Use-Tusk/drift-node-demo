@@ -51,7 +51,7 @@ Record from dev/production (at low sampling rates), and Cloud handles trace cura
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Use-Tusk/drift-node-demo)
 
-Open this demo repo in a [new GitHub Codespace](https://codespaces.new/Use-Tusk/drift-node-demo). Wait 2 minutes for the setup script to automatically install the Tusk CLI and all dependencies.
+Open this demo repo in a [new GitHub Codespace](https://codespaces.new/Use-Tusk/drift-node-demo). Wait 15 seconds for the setup script to automatically install the Tusk CLI and all dependencies.
 
 Alternatively, you can clone the repo and install dependencies manually:
 
