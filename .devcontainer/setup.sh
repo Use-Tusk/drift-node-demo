@@ -15,6 +15,23 @@ npm install
 echo "🔧 Installing Tusk CLI..."
 curl -fsSL https://raw.githubusercontent.com/Use-Tusk/tusk-drift-cli/main/install.sh | sh
 
+# Explicitly add Tusk to PATH (the installer installs to ~/.local/bin)
+export PATH="$HOME/.local/bin:$PATH"
+
+# Source shell config if it exists (in case installer modified it)
+[ -f "$HOME/.bashrc" ] && source "$HOME/.bashrc" 2>/dev/null || true
+
+# Verify Tusk installation
+echo "🔍 Verifying Tusk CLI installation..."
+if [ -f "$HOME/.local/bin/tusk" ]; then
+  echo "✅ Tusk CLI installed successfully!"
+  # Get version
+  tusk --version 2>&1 || echo "(Tusk CLI installed but version check failed)"
+else
+  echo "❌ Tusk CLI binary not found at $HOME/.local/bin/tusk"
+  echo "    Installation may have failed. Try manual installation."
+fi
+
 # Display helpful information
 echo ""
 echo "✅ Setup complete!"

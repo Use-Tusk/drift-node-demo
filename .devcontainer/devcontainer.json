@@ -1,6 +1,11 @@
 {
   "name": "Tusk Drift Node Demo",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:22",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "postCreateCommand": "bash .devcontainer/setup.sh",
-  "remoteUser": "node"
+  "remoteUser": "node",
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:/home/node/.local/bin"
+  }
 }
