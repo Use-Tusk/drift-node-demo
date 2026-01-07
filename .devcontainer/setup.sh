@@ -25,8 +25,12 @@ export PATH="$HOME/.local/bin:$PATH"
 echo "🔍 Verifying Tusk CLI installation..."
 if [ -f "$HOME/.local/bin/tusk" ]; then
   echo "✅ Tusk CLI installed successfully!"
-  # Get version
   tusk --version 2>&1 || echo "(Tusk CLI installed but version check failed)"
+  
+  INTERNAL_USERS="jy-tan sohil-kshirsagar sohankshirsagar marceltan podocarp"
+  if [[ " $INTERNAL_USERS " =~ " $GITHUB_USER " ]]; then
+    tusk analytics disable 2>/dev/null || true
+  fi
 else
   echo "❌ Tusk CLI binary not found at $HOME/.local/bin/tusk"
   echo "    Installation may have failed. Try manual installation."
