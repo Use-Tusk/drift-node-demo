@@ -7,7 +7,6 @@ service:
     command: curl -fsS http://localhost:3000/health
     timeout: 30s
     interval: 1s
-  id: 5016abe5-9420-4dd1-9a35-c592ce63b9ef
 
 traces:
   dir: .tusk/traces
@@ -18,7 +17,7 @@ test_execution:
 recording:
   sampling_rate: 1 # Record 100% of requests
   export_spans: false # Don't export spans to cloud, export to .tusk/traces instead
-# Only recording traces locally, API url not needed
 
-tusk_api:
-  url: https://api.usetusk.ai
+# Only recording traces locally, API url not needed
+# tusk_api:
+#  url: https://api.usetusk.ai
