@@ -27,9 +27,10 @@ if [ -f "$HOME/.local/bin/tusk" ]; then
   echo "✅ Tusk CLI installed successfully!"
   tusk --version 2>&1 || echo "(Tusk CLI installed but version check failed)"
   
-  INTERNAL_USERS="jy-tan sohil-kshirsagar sohankshirsagar marceltan podocarp"
+  INTERNAL_USERS="jy-tan sohil-kshirsagar sohankshirsagar marcel-tan podocarp"
   if [[ " $INTERNAL_USERS " =~ " $GITHUB_USER " ]]; then
-    tusk analytics disable 2>/dev/null || true
+    echo 'export TUSK_ANALYTICS_DISABLED=1' >> "$HOME/.bashrc"
+    echo 'export TUSK_ANALYTICS_DISABLED=1' >> "$HOME/.profile"
   fi
 else
   echo "❌ Tusk CLI binary not found at $HOME/.local/bin/tusk"
