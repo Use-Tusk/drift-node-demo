@@ -13,7 +13,7 @@ npm install
 
 # Install Tusk CLI
 echo "🔧 Installing Tusk CLI..."
-curl -fsSL https://raw.githubusercontent.com/Use-Tusk/tusk-drift-cli/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/Use-Tusk/tusk-cli/main/install.sh | sh
 
 # Explicitly add Tusk to PATH (the installer installs to ~/.local/bin)
 export PATH="$HOME/.local/bin:$PATH"
