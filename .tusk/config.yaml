@@ -18,6 +18,12 @@ recording:
   sampling_rate: 1 # Record 100% of requests
   export_spans: false # Don't export spans to cloud, export to .tusk/traces instead
 
+replay:
+  sandbox:
+    # Disabled for this demo because Codespaces/devcontainers may block the Linux replay sandbox.
+    # Your own app still defaults to strict sandboxing unless you override it.
+    mode: off
+
 # Only recording traces locally, API url not needed
 # tusk_api:
 #  url: https://api.usetusk.ai

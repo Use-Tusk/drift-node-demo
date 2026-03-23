@@ -184,6 +184,9 @@ The CLI replays recorded traces against your service:
 - `tusk drift list` - List available traces
 - `tusk drift run` - Replay local traces
 
+> [!NOTE]
+> During replay, Tusk normally starts your service in a [Fence](https://github.com/Use-Tusk/fence) sandbox so tests use recorded responses instead of live outbound calls. This demo sets `replay.sandbox.mode: off` in `.tusk/config.yaml` because GitHub Codespaces/devcontainers may block the Linux sandbox; your own app still defaults to strict sandboxing unless you override it.
+
 ### 3. **Tusk Cloud** (Optional)
 
 Tusk Cloud adds automated trace curation and failure analysis on top of the open-source CLI/SDK.
@@ -305,7 +308,5 @@ Questions? Reach out:
 - 📧 Email: [support@usetusk.ai](mailto:support@usetusk.ai)
 - 🐛 Issues: [GitHub Issues](https://github.com/Use-Tusk/drift-node-demo/issues)
 - 𝕏 Twitter: [@usetusk](https://twitter.com/usetusk)
-
----
 
 **Ready to catch bugs before production?** [Get started with Tusk Drift →](https://github.com/Use-Tusk/drift-node-sdk)
