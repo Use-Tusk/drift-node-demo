@@ -1,23 +1,29 @@
 service:
-    name: drift-node-demo
-    port: 3000
-    start:
-        command: npm run start
-    readiness_check:
-        command: curl -fsS http://localhost:3000/health
-        timeout: 30s
-        interval: 1s
+  name: drift-node-demo
+  port: 3000
+  start:
+    command: npm run start
+  readiness_check:
+    command: curl -fsS http://localhost:3000/health
+    timeout: 30s
+    interval: 1s
 
 traces:
-    dir: .tusk/traces
+  dir: .tusk/traces
 
 test_execution:
-    timeout: 30s
+  timeout: 30s
 
 recording:
-    sampling_rate: 1 # Record 100% of requests
-    export_spans: false # Don't export spans to cloud, export to .tusk/traces instead
+  sampling_rate: 1 # Record 100% of requests
+  export_spans: false # Don't export spans to cloud, export to .tusk/traces instead
+
+replay:
+  sandbox:
+    # Disabled for this demo because Codespaces/devcontainers may block the Linux replay sandbox.
+    # Your own app still defaults to strict sandboxing unless you override it.
+    mode: off
 
 # Only recording traces locally, API url not needed
 # tusk_api:
-#     url: https://api.usetusk.ai
+#  url: https://api.usetusk.ai
